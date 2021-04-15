@@ -1,0 +1,32 @@
+.experts {
+    width: 100%;
+    transform: translateY(-80px);
+}
+
+.strategySection {
+    padding: 15% 10%;
+    background-image: url("../../../images/simon-migaj-Yui5vfKHuzs-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.strategies {
+    background-color: white;
+    padding: 5% !important;
+    transform: translateY(-100px);
+    border-bottom: 5px solid orangered;
+}
+
+.strategy {
+    padding: 1% 2%;
+    border-bottom: 1px solid gray;
+}
+
+.strategy h5 {
+    color: brown;
+}
+
+.strategy-column {
+    padding: 0 0;
+}

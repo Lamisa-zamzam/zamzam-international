@@ -1,0 +1,14 @@
+.step{
+    margin-top: 5%;
+    background-color: bisque;
+    box-shadow: 5px 5px 10px gray;
+    padding: 2%;
+    margin: 4%;
+}
+
+@media(max-width: 760px){
+    .step{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

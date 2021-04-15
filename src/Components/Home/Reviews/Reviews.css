@@ -1,0 +1,27 @@
+.customer {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.heading {
+    margin-top: 8%;
+}
+
+.reviewContainer {
+    padding: 0% 10%;
+    padding-bottom: 20%;
+}
+
+.review {
+    border-bottom: 10px solid orangered;
+    padding: 15px;
+    box-shadow: 2px 2px 10px gray;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.quote{
+    height: 80px;
+    border-radius: 50%;
+}

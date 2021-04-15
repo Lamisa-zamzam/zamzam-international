@@ -1,0 +1,23 @@
+.contact-div {
+    background-color: #29313c;
+    color: white;
+    padding: 5% 10%;
+    position: absolute;
+    top: -100px;
+    right: 0;
+}
+
+li{
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+.contactBtn {
+    margin-left: 100px;
+}
+
+.footer {
+    background-color: #1d222a;
+    color: white;
+    padding: 10% 10%;
+}

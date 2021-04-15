@@ -1,0 +1,40 @@
+.headerContainer {
+    position: relative;
+    width: 100%;
+}
+
+.headerContainer::before {
+    content: "";
+    background-image: url("../../../../images/dan-dealmeida-MJZz3uthfXA-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+}
+
+.mainContainer {
+    text-align: right;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+@media (max-width: 760px) {
+    .headerContainer {
+        padding-bottom: 20%;
+    }
+}
+
+.mainButton {
+    margin-top: 5%;
+    margin-right: 2%;
+}
+
+.mainDiv {
+    position: relative;
+    color: black;
+}
