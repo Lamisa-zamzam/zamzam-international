@@ -63,7 +63,7 @@ const Footer = () => {
                         </p>
                         <input
                             type="email"
-                            class="form-control"
+                            className="form-control"
                             id="exampleInputEmail1"
                             aria-describedby="emailHelp"
                             placeholder="Enter email"
@@ -80,6 +80,12 @@ const Footer = () => {
                         </Button>
                     </Col>
                 </Row>
+                <p className="text-center mt-5">
+                    <small>
+                        Copyright © Lamisa Zamzam {new Date().getFullYear()},
+                        all rights reserved.{" "}
+                    </small>
+                </p>
             </footer>
         </div>
     );

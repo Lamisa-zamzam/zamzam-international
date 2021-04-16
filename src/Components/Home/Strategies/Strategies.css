@@ -21,6 +21,12 @@
 .strategy {
     padding: 1% 2%;
     border-bottom: 1px solid gray;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.icon {
+    color: brown;
 }
 
 .strategy h5 {

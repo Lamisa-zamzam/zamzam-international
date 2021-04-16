@@ -1,3 +1,5 @@
+import { faChessKnight, faComments, faFighterJet, faHandshake, faSignal } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import experts from "../../../images/2021-04-15 (42).png";
@@ -22,40 +24,78 @@ const Strategies = () => {
                             </h2>
                             <div>
                                 <div className="strategy">
-                                    <h5>Real Time Status</h5>
-                                    <p>
-                                        By dealing with data, select tools that
-                                        help you automate time-consuming
-                                        processes
-                                    </p>
+                                    <FontAwesomeIcon
+                                        size="3x" className="mt-3 icon"
+                                        icon={faSignal}
+                                    />
+                                    <div>
+                                        {" "}
+                                        <h5>Real Time Status</h5>
+                                        <p>
+                                            By dealing with data, select tools
+                                            that help you automate
+                                            time-consuming processes
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="strategy">
+                                    <FontAwesomeIcon
+                                        size="3x"
+                                        className="mt-3 icon"
+                                        icon={faHandshake}
+                                    />
+                                    <div>
+                                        {" "}
+                                        <h5>Experienced Team</h5>
+                                        <p>
+                                            Our Team is well-trained, organized
+                                            and experienced.{" "}
+                                        </p>
+                                    </div>
                                 </div>
                                 <div className="strategy">
-                                    <h5>Experienced Team</h5>
-                                    <p>
-                                        Our Team is well-trained, organized and
-                                        experienced.{" "}
-                                    </p>
+                                    <FontAwesomeIcon
+                                        size="3x" className="mt-3 icon"
+                                        icon={faComments}
+                                    />
+                                    <div>
+                                        {" "}
+                                        <h5>Live Chat with Experts</h5>
+                                        <p>
+                                            You can chat with our team anytime
+                                            you want.
+                                        </p>
+                                    </div>
                                 </div>
+
                                 <div className="strategy">
-                                    <h5>Live Chat with Experts</h5>
-                                    <p>
-                                        You can chat with our team anytime you
-                                        want.
-                                    </p>
+                                    <FontAwesomeIcon
+                                        size="3x" className="mt-3 icon"
+                                        icon={faFighterJet}
+                                    />
+                                    <div>
+                                        <h5>Fast Processing Guarantee</h5>
+                                        <p>
+                                            We guarantee you to process your
+                                            visa within Two months.
+                                        </p>
+                                    </div>
                                 </div>
+
                                 <div className="strategy">
-                                    <h5>Fast Processing Guarantee</h5>
-                                    <p>
-                                        We guarantee you to process your visa
-                                        within Two months.
-                                    </p>
-                                </div>
-                                <div className="strategy">
-                                    <h5>Strategical Outline</h5>
-                                    <p>
-                                        We make unique outline for every
-                                        customer and drive them accordingly.
-                                    </p>
+                                    <FontAwesomeIcon
+                                        size="3x" className="mt-3 icon"
+                                        icon={faChessKnight}
+                                    />
+                                    <div>
+                                        {" "}
+                                        <h5>Strategical Outline</h5>
+                                        <p>
+                                            We make unique outline for every
+                                            customer and drive them accordingly.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </Col>

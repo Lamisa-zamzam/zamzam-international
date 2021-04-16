@@ -1,13 +1,12 @@
 import React, { useContext, useState } from "react";
 import { Container } from "react-bootstrap";
-import { UserContext } from "../../App";
+import { UserContext } from "../../../App";
 import { useHistory, useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import "./Login.css";
 
 //firebase
-import firebaseConfig from "./firebase.config";
 import firebase from "firebase/app";
 import "firebase/auth";
 
@@ -18,6 +17,7 @@ import {
     faGoogle,
     faTwitterSquare,
 } from "@fortawesome/free-brands-svg-icons";
+import { firebaseConfig } from "./Firebase.config";
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
@@ -41,10 +41,26 @@ const Login = () => {
                 const googleUser = result.user;
                 const { displayName, email, photoURL } = googleUser;
                 handleUser(displayName, email, photoURL, true);
+                console.log(email);
+                sessionStorage.setItem("email", email);
+                sessionStorage.setItem("name", displayName);
+                sessionStorage.setItem("photo", photoURL);
+                handleAuthToken();
             })
             .catch((error) => {
                 handleErrorMessage(error);
             });
+    };
+
+    const handleAuthToken = () => {
+        firebase
+            .auth()
+            .currentUser.getIdToken(true)
+            .then(function (idToken) {
+                sessionStorage.setItem("token", idToken);
+                history.replace(from);
+            })
+            .catch(function (error) {});
     };
 
     // handles user info
@@ -63,7 +79,6 @@ const Login = () => {
             newUser.isLoggedIn = true;
         }
         setUser(newUser);
-        history.replace(from);
     };
 
     // handles error in case it occurs
@@ -152,7 +167,7 @@ const Login = () => {
                     alt="Globetrotter"
                     className="logo"
                 />
-                <h3 style={{ display: "inline", marginLeft: "20px" }}>
+                {/* <h3 style={{ display: "inline", marginLeft: "20px" }}>
                     {user.isNewUser ? "Create an account" : "Log In"}
                 </h3>
                 <br />
@@ -166,8 +181,8 @@ const Login = () => {
                         placeholder="Your Name"
                     />
                 )}
-                <br />
-                <input
+                <br /> */}
+                {/* <input
                     type="email"
                     name="email"
                     id="email"
@@ -184,7 +199,7 @@ const Login = () => {
                     </span>
                 )}
                 <br />
-                <input
+               <input
                     type="password"
                     name="password"
                     ref={register({
@@ -283,7 +298,7 @@ const Login = () => {
                     >
                         {user.isNewUser ? "Login" : "Create An Account"}
                     </a>
-                </p>
+                </p> */}
             </form>
             <div className="social-login">
                 <h4>or</h4>

@@ -5,7 +5,7 @@
 
 .headerContainer::before {
     content: "";
-    background-image: url("../../../../images/dan-dealmeida-MJZz3uthfXA-unsplash.jpg");
+    background-image: url("../../../images/dan-dealmeida-MJZz3uthfXA-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;

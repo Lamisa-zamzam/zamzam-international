@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Container } from "react-bootstrap";
-import MyNavbar from "../MyNavbar/MyNavbar";
+import MyNavbar from "../../Shared/MyNavbar/MyNavbar";
 import "./Header.css";
 
 const Header = () => {
