@@ -23,7 +23,10 @@ const MakeAdmin = () => {
         })
             .then((res) => res.json())
             .then((result) => {
-                console.log(result);
+                if (result) {
+                    alert("Admin added successfully!!");
+                    window.location.reload();
+                }
             });
     };
 
@@ -45,11 +48,8 @@ const MakeAdmin = () => {
                             <span className="error">Email is required</span>
                         )}
                     </Form.Group>
-                    <br/>
-                    <Button
-                        variant="primary"
-                        type="submit"
-                    >
+                    <br />
+                    <Button variant="primary" type="submit">
                         Add Admin
                     </Button>
                 </Form>

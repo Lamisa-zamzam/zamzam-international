@@ -1,5 +1,11 @@
-.bookingFieldContainer{
+.bookingFieldContainer {
     display: grid;
     grid-template-columns: 20% 75%;
     gap: 5%;
+}
+
+.formSubmitButton {
+    position: absolute;
+    bottom: -130px;
+    left: 75%;
 }

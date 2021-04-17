@@ -48,7 +48,7 @@ const Sidebar = () => {
                         className="sidebarIcon"
                         icon={faClipboardList}
                     />
-                    <h5>Your Booking list</h5>
+                    <h5>{isAdmin? "Orders": "Your Booking list"}</h5>
                 </div>
             </Link>
             <Link to="/dashboard/giveReview">

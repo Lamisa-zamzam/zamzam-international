@@ -11,7 +11,12 @@ import GiveReview from "./Components/Dashboard/GiveReview/GiveReview";
 import AddService from "./Components/Dashboard/AddService/AddService";
 import MakeAdmin from "./Components/Dashboard/MakeAdmin/MakeAdmin";
 import ManageServices from "./Components/Dashboard/ManageServices/ManageServices";
-import Payment from "./Components/Dashboard/Book/Payment/Payment/Payment";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+
+const stripePromise = loadStripe(
+    "pk_test_51IeJOnEbOwJYaM8zeiKuT8tF911nK1hHgA9uH77BP8Atf5XymHXR3XIlI8w8QIv5P19rA3Li3bfz15bVuK0aw9dF00MnyVJpef"
+);
 
 export const UserContext = createContext();
 
@@ -32,9 +37,6 @@ function App() {
                     <Route path="/home">
                         <Home />
                     </Route>
-                    <Route path="/pay">
-                        <Payment />
-                    </Route>
                     <PrivateRoute exact path="/dashboard">
                         <Dashboard />
                     </PrivateRoute>
@@ -54,7 +56,9 @@ function App() {
                         <ManageServices />
                     </PrivateRoute>
                     <PrivateRoute path="/dashboard/book/:id">
-                        <Book />
+                        <Elements stripe={stripePromise}>
+                            <Book />
+                        </Elements>
                     </PrivateRoute>
                     <Route exact path="/">
                         <Home />
