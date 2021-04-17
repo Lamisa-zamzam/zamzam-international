@@ -1,3 +1,6 @@
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "./Sidebar.css";
 import {
     faClipboardList,
     faCommentDots,
@@ -7,9 +10,6 @@ import {
     faUserShield,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import "./Sidebar.css";
 
 const Sidebar = () => {
     const email = sessionStorage.getItem("email");
@@ -25,12 +25,11 @@ const Sidebar = () => {
             });
     }, [email]);
 
-    console.log(isAdmin);
     return (
         <div className="sidebarContainer">
             <h3 className="mb-5">Zamzam International</h3>
             <hr style={{ color: "white" }} />
-            <Link to="/dashboard/book">
+            <Link to={`/dashboard/book/`}>
                 <div className="dashboardList">
                     <FontAwesomeIcon
                         className="sidebarIcon"

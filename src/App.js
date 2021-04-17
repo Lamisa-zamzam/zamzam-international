@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import Book from "./Components/Dashboard/Book/Book";
+import Book from "./Components/Dashboard/Book/Book/Book";
 import Bookings from "./Components/Dashboard/Bookings/Bookings";
 import Dashboard from "./Components/Dashboard/Dashboard/Dashboard";
 import Home from "./Components/Home/Home/Home";
@@ -11,6 +11,7 @@ import GiveReview from "./Components/Dashboard/GiveReview/GiveReview";
 import AddService from "./Components/Dashboard/AddService/AddService";
 import MakeAdmin from "./Components/Dashboard/MakeAdmin/MakeAdmin";
 import ManageServices from "./Components/Dashboard/ManageServices/ManageServices";
+import Payment from "./Components/Dashboard/Book/Payment/Payment/Payment";
 
 export const UserContext = createContext();
 
@@ -31,11 +32,11 @@ function App() {
                     <Route path="/home">
                         <Home />
                     </Route>
+                    <Route path="/pay">
+                        <Payment />
+                    </Route>
                     <PrivateRoute exact path="/dashboard">
                         <Dashboard />
-                    </PrivateRoute>
-                    <PrivateRoute path="/dashboard/book">
-                        <Book />
                     </PrivateRoute>
                     <PrivateRoute path="/dashboard/bookings">
                         <Bookings />
@@ -52,8 +53,8 @@ function App() {
                     <PrivateRoute path="/dashboard/manageServices">
                         <ManageServices />
                     </PrivateRoute>
-                    <PrivateRoute path="/dashboard/book/$id">
-                        <ManageServices />
+                    <PrivateRoute path="/dashboard/book/:id">
+                        <Book />
                     </PrivateRoute>
                     <Route exact path="/">
                         <Home />
