@@ -3,6 +3,7 @@ import { Col, Container, Form, Row } from "react-bootstrap";
 import Sidebar from "../../Shared/Sidebar/Sidebar";
 import AdminBookings from "./AdminBookings";
 import "./Bookings.css";
+import UserBookings from "./UserBookings";
 
 const Bookings = () => {
     const [orders, setOrders] = useState([]);
@@ -46,13 +47,15 @@ const Bookings = () => {
         <div className="allBookingsDiv">
             <Sidebar />
             <Container className="bookingsContainer">
-                <Row className="headerRow">
-                    <Col md={2}>Name</Col>
-                    <Col md={3}>Email</Col>
-                    <Col md={2}>Service</Col>
-                    <Col md={3}>Payed With</Col>
-                    <Col md={2}>Status</Col>
-                </Row>
+                {isAdmin && (
+                    <Row className="headerRow">
+                        <Col md={2}>Name</Col>
+                        <Col md={3}>Email</Col>
+                        <Col md={2}>Service</Col>
+                        <Col md={3}>Payed With</Col>
+                        <Col md={2}>Status</Col>
+                    </Row>
+                )}
                 {isAdmin &&
                     orders.map((order) => (
                         <AdminBookings
@@ -60,6 +63,12 @@ const Bookings = () => {
                             order={order}
                             handleStatusChange={handleStatusChange}
                         />
+                    ))}
+                {!isAdmin &&
+                    orders.map((order) => (
+                        <Row>
+                            <UserBookings order={order} key={order._id} />
+                        </Row>
                     ))}
             </Container>
         </div>

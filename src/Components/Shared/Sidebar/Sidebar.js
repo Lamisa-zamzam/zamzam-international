@@ -25,19 +25,23 @@ const Sidebar = () => {
             });
     }, [email]);
 
+    const id = "60799c3a92b36b4d686c1d80";
+
     return (
         <div className="sidebarContainer">
             <h3 className="mb-5">Zamzam International</h3>
             <hr style={{ color: "white" }} />
-            <Link to={`/dashboard/book/`}>
-                <div className="dashboardList">
-                    <FontAwesomeIcon
-                        className="sidebarIcon"
-                        icon={faShoppingCart}
-                    />{" "}
-                    <h5>Book A Visa</h5>
-                </div>
-            </Link>
+            {!isAdmin && (
+                <Link to={`/dashboard/book/${id}`}>
+                    <div className="dashboardList">
+                        <FontAwesomeIcon
+                            className="sidebarIcon"
+                            icon={faShoppingCart}
+                        />{" "}
+                        <h5>Book A Visa</h5>
+                    </div>
+                </Link>
+            )}
             <Link to="/dashboard/bookings">
                 {" "}
                 <div
@@ -48,18 +52,20 @@ const Sidebar = () => {
                         className="sidebarIcon"
                         icon={faClipboardList}
                     />
-                    <h5>{isAdmin? "Orders": "Your Booking list"}</h5>
+                    <h5>{isAdmin ? "Manage Orders" : "Your Booking list"}</h5>
                 </div>
             </Link>
-            <Link to="/dashboard/giveReview">
-                <div className="dashboardList">
-                    <FontAwesomeIcon
-                        className="sidebarIcon"
-                        icon={faCommentDots}
-                    />
-                    <h5>Give a Review</h5>
-                </div>
-            </Link>
+            {!isAdmin && (
+                <Link to="/dashboard/giveReview">
+                    <div className="dashboardList">
+                        <FontAwesomeIcon
+                            className="sidebarIcon"
+                            icon={faCommentDots}
+                        />
+                        <h5>Give a Review</h5>
+                    </div>
+                </Link>
+            )}
             {isAdmin && (
                 <Link to="/dashboard/addService">
                     {" "}
@@ -90,7 +96,7 @@ const Sidebar = () => {
                             className="sidebarIcon"
                             icon={faTasks}
                         />
-                        <h5>Manage Visa Services</h5>
+                        <h5>Manage Services</h5>
                     </div>
                 </Link>
             )}
