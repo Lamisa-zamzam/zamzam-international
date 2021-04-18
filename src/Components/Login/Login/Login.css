@@ -56,11 +56,6 @@
     margin-bottom: -5px;
 }
 
-.logo {
-    border-radius: 100px;
-    width: 10%;
-}
-
 @media (max-width: 760px) {
     .logo {
         width: 50%;

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "../../Shared/Sidebar/Sidebar";
 import { useForm } from "react-hook-form";
-import "./AddService.css";
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 import { useHistory } from "react-router";
@@ -53,9 +52,9 @@ const AddService = () => {
     };
 
     return (
-        <div className="addServiceContainer">
+        <div className="dashboardContainer">
             <Sidebar />
-            <div className="serviceAddingFormContainer">
+            <div className="dashboardFormContainer">
                 <h3 className="dashboardTitle">Add A service</h3>
                 <br />
                 <Form onSubmit={handleSubmit(onSubmit)}>
@@ -114,7 +113,7 @@ const AddService = () => {
                     </Form.Group>
                     <br />
                     {imageURL ? (
-                        <Button variant="primary" type="submit">
+                        <Button className="brandBtn" type="submit">
                             Add
                         </Button>
                     ) : (

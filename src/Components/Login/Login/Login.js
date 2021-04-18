@@ -167,7 +167,7 @@ const Login = () => {
                     alt="Globetrotter"
                     className="logo"
                 />
-                {/* <h3 style={{ display: "inline", marginLeft: "20px" }}>
+                <h3 style={{ display: "inline", marginLeft: "20px" }}>
                     {user.isNewUser ? "Create an account" : "Log In"}
                 </h3>
                 <br />
@@ -175,23 +175,25 @@ const Login = () => {
                     <input
                         type="text"
                         name="name"
-                        id="name"
-                        ref={register({ required: true })}
+                        {...register("name", { required: true })}
                         className="form-field"
                         placeholder="Your Name"
                     />
                 )}
-                <br /> */}
-                {/* <input
+                <br />
+                <input
                     type="email"
                     name="email"
                     id="email"
-                    ref={register({ required: true, pattern: /\S+@\S+\.\S+/ })}
+                    {...register("email", {
+                        required: true,
+                        pattern: /\S+@\S+\.\S+/,
+                    })}
                     className="form-field"
                     placeholder="Your Email"
                 />
                 <br />
-                {errors.email && (
+                {errors && (
                     <span className="error">
                         {errors.email.type === "required"
                             ? "Email is required"
@@ -199,12 +201,12 @@ const Login = () => {
                     </span>
                 )}
                 <br />
-               <input
+                <input
                     type="password"
                     name="password"
-                    ref={register({
+                     {...register("password", {
                         required: true,
-                        minLength: 8,
+                         minLength: 8,
                         pattern: /\d{1}/,
                     })}
                     placeholder="Your Password"
@@ -213,7 +215,7 @@ const Login = () => {
                     onBlur={handleBlur}
                 />
                 <br />
-                {errors.password && (
+                {errors && (
                     <span className="error">
                         {errors.password.type === "required" &&
                             "Password is required"}
@@ -228,11 +230,11 @@ const Login = () => {
                     <input
                         type="password"
                         name="confirmPassword"
-                        ref={register({
-                            required: true,
-                            minLength: 8,
-                            pattern: /\d{1}/,
-                        })}
+                        {...register("confirmPassword", {
+                        required: true,
+                         minLength: 8,
+                        pattern: /\d{1}/,
+                    })}
                         placeholder="Confirm Your Password"
                         className="form-field"
                         id="confirmPassword"
@@ -240,7 +242,7 @@ const Login = () => {
                     />
                 )}
                 <br />
-                {errors.confirmPassword && (
+                {errors && (
                     <span className="error">
                         {errors.confirmPassword.type === "required" &&
                             "Password is required"}
@@ -298,7 +300,7 @@ const Login = () => {
                     >
                         {user.isNewUser ? "Login" : "Create An Account"}
                     </a>
-                </p> */}
+                </p>
             </form>
             <div className="social-login">
                 <h4>or</h4>

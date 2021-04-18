@@ -1,0 +1,29 @@
+.partnersSection {
+    padding: 2% 5% 15% 5%;
+    margin-bottom: 5%;
+}
+
+.partnersSection h6{
+    padding: 5%;
+    margin: 3%;
+    text-align: center;
+    font-size: 40px;
+    border: 2px solid brown;
+    box-shadow: 5px 5px 10px gray;
+    border-radius: 5px;
+}
+
+@media(max-width: 760px){
+    .partnersSection{
+        margin-bottom: 25%;
+    }
+
+    .partnersSection h1{
+        margin-bottom: 10%;
+    }
+}
+
+.partnersSection h1{
+    margin-bottom: 5%;
+    color: rgb(151, 42, 3);
+}

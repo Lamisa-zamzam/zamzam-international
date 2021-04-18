@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import Sidebar from "../../Shared/Sidebar/Sidebar";
-import "../Bookings/Bookings.css";
 
 const ManageServices = () => {
     const [services, setServices] = useState([]);
@@ -31,7 +30,7 @@ const ManageServices = () => {
     }
 
     return (
-        <div className="allBookingsDiv">
+        <div className="tableContainer">
             <Sidebar />
             <Container className="bookingsContainer">
                 <Row className="headerRow">
@@ -66,7 +65,7 @@ const ManageServices = () => {
                             </p>
                         </Col>
                         <Col md={2} className="statusCol">
-                            <Button variant="danger" onClick={() => handleServiceDelete(service._id)}>Delete</Button>
+                            <Button style={{backgroundColor: "red", border: "none"}} onClick={() => handleServiceDelete(service._id)}>Delete</Button>
                         </Col>
                         <hr />
                     </Row>

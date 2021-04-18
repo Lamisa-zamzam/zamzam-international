@@ -27,9 +27,10 @@ const Sidebar = () => {
 
     const id = "60799c3a92b36b4d686c1d80";
 
+    
     return (
         <div className="sidebarContainer">
-            <h3 className="mb-5">Zamzam International</h3>
+            <h3 className="mb-5"><strong>Zamzam International</strong></h3>
             <hr style={{ color: "white" }} />
             {!isAdmin && (
                 <Link to={`/dashboard/book/${id}`}>

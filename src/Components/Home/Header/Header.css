@@ -17,6 +17,14 @@
     opacity: 0.75;
 }
 
+@media(max-width: 760px){
+    .headerContainer::before {
+        background-image: url("../../../images/dan-dealmeida-MJZz3uthfXA-unsplash.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
 .mainContainer {
     text-align: right;
     padding-top: 15%;

@@ -8,7 +8,7 @@ This responsive project provides a number of visas which you can apply for. It a
 
 ### You can also visit [My server](https://morning-shelf-52119.herokuapp.com/) form where I am loading data.
 
-My project includes:\
+My project includes:
 
 1.  [React](https://reactjs.org/docs/getting-started.html),
 2.  [React Router](https://reactrouter.com/),

@@ -9,15 +9,32 @@
     flex-direction: row;
 }
 
+.agencySlogan {
+    margin-left: 3%;
+    margin-top: -3%;
+}
+
+.footerAgencyName {
+    display: inline;
+    margin-left: 5%;
+}
+
 @media (max-width: 760px) {
     .contact-div {
-        display: grid;
-        grid-template-rows: 80% 20%;
+        flex-direction: column;
     }
 
     .contactDivCol {
         margin-bottom: 10%;
         padding: 5% -1340% !important;
+    }
+
+    .footerAgencyName {
+        display: block;
+    }
+
+    .footerLogo{
+        width: 30% !important;
     }
 
     .footer {

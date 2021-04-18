@@ -1,5 +1,8 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Button, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import MyNavbar from "../../Shared/MyNavbar/MyNavbar";
 import "./Header.css";
 
@@ -12,8 +15,8 @@ const Header = () => {
                 <h2>
                     Since 1980 We are the experts <br /> in Visa Industry
                 </h2>
-                <Button className="mainButton">Get Started</Button>
-                <Button className="mainButton">Contact Us</Button>
+                <Link to="/dashboard/bookings"><Button className="mainButton brandBtn">Get Started<FontAwesomeIcon icon={faArrowRight} style={{marginLeft: "10px"}}/></Button></Link>
+                <Button className="mainButton brandBtn">Contact Us<FontAwesomeIcon icon={faArrowRight} style={{marginLeft: "10px"}}/></Button>
             </Container>
             </div>
         </div>

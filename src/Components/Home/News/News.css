@@ -1,6 +1,5 @@
 .newsSection {
-    padding: 2% 5% 15% 5%;
-    margin-bottom: 5%;
+    padding: 2% 5% 10% 5%;
 }
 
 .title {
@@ -30,7 +29,7 @@
 
     .newsColumn {
         display: block;
-        padding: 2%;
+        padding:5%;
         margin-bottom: 15%;
     }
 

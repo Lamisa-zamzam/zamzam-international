@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "../../Shared/Sidebar/Sidebar";
 import { useForm } from "react-hook-form";
-import "../AddService/AddService.css";
 import { Form, Button } from "react-bootstrap";
 
 const GiveReview = () => {
@@ -34,9 +33,9 @@ const GiveReview = () => {
     };
 
     return (
-        <div className="addServiceContainer">
+        <div className="dashboardContainer" style={{height: "100vh"}}>
             <Sidebar />
-            <div className="serviceAddingFormContainer">
+            <div className="dashboardFormContainer">
                 <h3 className="dashboardTitle">Give us a review</h3>
                 <br />
                 <Form onSubmit={handleSubmit(onSubmit)}>
@@ -87,7 +86,7 @@ const GiveReview = () => {
                         )}
                     </Form.Group>
                     <br />
-                    <Button variant="primary" type="submit">
+                    <Button className="brandBtn" type="submit">
                         Submit
                     </Button>
                 </Form>

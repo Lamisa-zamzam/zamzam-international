@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { useHistory, useParams } from "react-router";
 import Sidebar from "../../../Shared/Sidebar/Sidebar";
 import "./Book.css";
-import "../../AddService/AddService.css";
 import { Link } from "react-router-dom";
 
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
@@ -64,11 +63,7 @@ const Book = () => {
             setPaymentError(null);
             console.log("[PaymentMethod]", paymentMethod);
             const { id } = paymentMethod;
-            const { brand } = paymentMethod.card;
-            const { exp_month } = paymentMethod.card;
-            const { exp_year } = paymentMethod.card;
-            const { last4 } = paymentMethod.card;
-            const { funding } = paymentMethod.card;
+            const { brand,  exp_month, exp_year, last4,funding  } = paymentMethod.card;
             setPaymentId(id);
             setPaymentBrand(brand);
             setCardExpireMonth(exp_month);
@@ -115,9 +110,9 @@ const Book = () => {
     };
 
     return (
-        <div className="bookingFieldContainer addServiceContainer">
+        <div className="bookingFieldContainer dashboardContainer">
             <Sidebar />
-            <div className="serviceAddingFormContainer">
+            <div className="dashboardFormContainer">
                 <h3 className="dashboardTitle">Book Your Visa</h3>
                 <br />
                 <Form onSubmit={handleSubmit(onSubmit)}>
@@ -172,9 +167,8 @@ const Book = () => {
                     <br />
                     {paymentSuccess ? (
                         <Button
-                            variant="primary"
                             type="submit"
-                            className="formSubmitButton"
+                            className="formSubmitButton brandBtn"
                         >
                             Order Visa
                         </Button>
@@ -215,8 +209,8 @@ const Book = () => {
                         }}
                     />
                     <br />
-                    <br />
-                    <Button type="submit" disabled={!stripe}>
+                    <br /> 
+                    <Button className="brandBtn" type="submit" disabled={!stripe}>
                         Confirm Payment
                     </Button>
                     <br />

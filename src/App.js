@@ -1,6 +1,5 @@
 import { createContext, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./App.css";
 import Book from "./Components/Dashboard/Book/Book/Book";
 import Bookings from "./Components/Dashboard/Bookings/Bookings";
 import Dashboard from "./Components/Dashboard/Dashboard/Dashboard";
@@ -13,6 +12,7 @@ import MakeAdmin from "./Components/Dashboard/MakeAdmin/MakeAdmin";
 import ManageServices from "./Components/Dashboard/ManageServices/ManageServices";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import "./App.css";
 
 const stripePromise = loadStripe(
     "pk_test_51IeJOnEbOwJYaM8zeiKuT8tF911nK1hHgA9uH77BP8Atf5XymHXR3XIlI8w8QIv5P19rA3Li3bfz15bVuK0aw9dF00MnyVJpef"
@@ -29,7 +29,7 @@ function App() {
         isLoggedIn: false,
         error: "",
     });
-    console.log(user.email);
+    
     return (
         <UserContext.Provider value={[user, setUser]}>
             <Router>

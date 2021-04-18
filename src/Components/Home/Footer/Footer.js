@@ -1,3 +1,5 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./Footer.css";
@@ -20,13 +22,22 @@ const Footer = () => {
                         </h6>
                     </div>
                     <div>
-                        <Button className="contactBtn">Contact Us</Button>
+                        <Button className="contactBtn brandBtn">Contact Us<FontAwesomeIcon icon={faArrowRight} style={{marginLeft: "10px"}}/></Button>
                     </div>
                 </div>
             </Container>
             <footer className="footer">
-                <h2 className="text-center">Zamzam International</h2>
-                <p className="text-center">Trusted Visa and travel agency</p>
+                <div className="text-center">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD4qERDnuFM9cBrqRQdDv-fVwKcHHIQQ3lDQ&usqp=CAU"
+                        alt="Globetrotter"
+                        className="logo footerLogo"
+                    />
+                    <h2 className="footerAgencyName">Zamzam International</h2>
+                    <p className="text-center agencySlogan">
+                        Trusted Visa service agency
+                    </p>
+                </div>
                 <hr style={{ color: "white" }} />
                 <Row>
                     <Col md={3}>
@@ -77,8 +88,9 @@ const Footer = () => {
                                 marginTop: "-7px",
                                 marginLeft: "-5px",
                             }}
+                            className="brandBtn"
                         >
-                            >
+                           >
                         </Button>
                     </Col>
                 </Row>

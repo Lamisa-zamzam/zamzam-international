@@ -2,7 +2,6 @@ import React from "react";
 import Sidebar from "../../Shared/Sidebar/Sidebar";
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import "../AddService/AddService.css";
 
 const MakeAdmin = () => {
     const {
@@ -31,9 +30,9 @@ const MakeAdmin = () => {
     };
 
     return (
-        <div className="addServiceContainer">
-            <Sidebar />
-            <div className="serviceAddingFormContainer">
+        <div className="dashboardContainer" style={{height: "100vh"}}>
+            <Sidebar/>
+            <div className="dashboardFormContainer">
                 <h3 className="dashboardTitle">Make an Admin</h3>
                 <br />
                 <Form onSubmit={handleSubmit(onSubmit)}>
@@ -49,7 +48,7 @@ const MakeAdmin = () => {
                         )}
                     </Form.Group>
                     <br />
-                    <Button variant="primary" type="submit">
+                    <Button className="brandBtn" type="submit">
                         Add Admin
                     </Button>
                 </Form>

@@ -1,18 +1,21 @@
-.step{
+.step {
     margin-top: 5%;
-    background-color: bisque;
+    background-color: rgb(189, 56, 56);
     box-shadow: 5px 5px 10px gray;
     padding: 2%;
-    margin: 4%;
+    margin: 0 4%;
+    color: white;
+    border-radius: 5px;
+    transform: translateY(-70px);
 }
 
-@media(max-width: 760px){
-    .step{
-        margin-left: 0;
-        margin-right: 0;
+@media (max-width: 760px) {
+    .step {
+        margin: 4% 0;
+        transform: translateY(0);
     }
-    
-    .stepsContainer{
+
+    .stepsContainer {
         margin-bottom: 15%;
     }
 }

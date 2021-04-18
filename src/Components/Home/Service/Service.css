@@ -1,14 +1,24 @@
-.serviceContainer a:-webkit-any-link{
+.serviceContainer a:-webkit-any-link {
     text-decoration: none;
     color: black;
 }
 
-@media(max-width: 760px){
-    .serviceSection{
+.serviceImage {
+    transition: all 0.2s ease-in-out;
+}
+
+.serviceImage:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+
+@media (max-width: 760px) {
+    .serviceSection {
         margin-bottom: 25%;
     }
 
-    .serviceContainer{
+    .serviceContainer {
         margin-bottom: 10%;
     }
 }
