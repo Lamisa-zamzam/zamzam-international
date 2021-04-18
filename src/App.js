@@ -29,7 +29,7 @@ function App() {
         isLoggedIn: false,
         error: "",
     });
-    
+
     return (
         <UserContext.Provider value={[user, setUser]}>
             <Router>

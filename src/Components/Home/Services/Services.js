@@ -21,9 +21,11 @@ const Services = () => {
             </h2>
 
             <Container>
-                <Row className="g-3 mb-3">{
-                    services.map(service => <Service key={service._id} service={service}/>)
-                }</Row>
+                <Row className="g-3 mb-3">
+                    {services.map((service) => (
+                        <Service key={service._id} service={service} />
+                    ))}
+                </Row>
             </Container>
         </section>
     );

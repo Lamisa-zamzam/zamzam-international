@@ -11,7 +11,6 @@ const MakeAdmin = () => {
     } = useForm();
 
     const onSubmit = (data) => {
-        console.log(data);
         const { email } = data;
         const admin = { email };
 
@@ -30,8 +29,8 @@ const MakeAdmin = () => {
     };
 
     return (
-        <div className="dashboardContainer" style={{height: "100vh"}}>
-            <Sidebar/>
+        <div className="dashboardContainer" style={{ height: "100vh" }}>
+            <Sidebar />
             <div className="dashboardFormContainer">
                 <h3 className="dashboardTitle">Make an Admin</h3>
                 <br />

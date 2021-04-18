@@ -2,7 +2,7 @@ import React from "react";
 import { Col } from "react-bootstrap";
 
 const Review = (props) => {
-    const {_id, feedback, imgURL, name, profession} = props.review;
+    const { feedback, imgURL, name, profession } = props.review;
     return (
         <Col md={4}>
             <div className="review">
@@ -11,9 +11,7 @@ const Review = (props) => {
                     alt=""
                     className="quote"
                 />
-                <p>
-                   {feedback}
-                </p>
+                <p>{feedback}</p>
                 <h5>{name}</h5>
                 <small>{profession}</small>
                 <br />

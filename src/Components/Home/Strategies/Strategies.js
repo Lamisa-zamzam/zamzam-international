@@ -1,9 +1,15 @@
-import { faChessKnight, faComments, faFighterJet, faHandshake, faSignal } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import experts from "../../../images/2021-04-15 (42).png";
 import "./Strategies.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faChessKnight,
+    faComments,
+    faFighterJet,
+    faHandshake,
+    faSignal,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Strategies = () => {
     return (
@@ -25,7 +31,8 @@ const Strategies = () => {
                             <div>
                                 <div className="strategy">
                                     <FontAwesomeIcon
-                                        size="3x" className="mt-3 icon"
+                                        size="3x"
+                                        className="mt-3 icon"
                                         icon={faSignal}
                                     />
                                     <div>
@@ -56,7 +63,8 @@ const Strategies = () => {
                                 </div>
                                 <div className="strategy">
                                     <FontAwesomeIcon
-                                        size="3x" className="mt-3 icon"
+                                        size="3x"
+                                        className="mt-3 icon"
                                         icon={faComments}
                                     />
                                     <div>
@@ -71,7 +79,8 @@ const Strategies = () => {
 
                                 <div className="strategy">
                                     <FontAwesomeIcon
-                                        size="3x" className="mt-3 icon"
+                                        size="3x"
+                                        className="mt-3 icon"
                                         icon={faFighterJet}
                                     />
                                     <div>
@@ -85,7 +94,8 @@ const Strategies = () => {
 
                                 <div className="strategy">
                                     <FontAwesomeIcon
-                                        size="3x" className="mt-3 icon"
+                                        size="3x"
+                                        className="mt-3 icon"
                                         icon={faChessKnight}
                                     />
                                     <div>

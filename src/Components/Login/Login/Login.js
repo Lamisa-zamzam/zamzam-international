@@ -41,7 +41,6 @@ const Login = () => {
                 const googleUser = result.user;
                 const { displayName, email, photoURL } = googleUser;
                 handleUser(displayName, email, photoURL, true);
-                console.log(email);
                 sessionStorage.setItem("email", email);
                 sessionStorage.setItem("name", displayName);
                 sessionStorage.setItem("photo", photoURL);
@@ -52,6 +51,7 @@ const Login = () => {
             });
     };
 
+    // handles setting auth token in the session storage
     const handleAuthToken = () => {
         firebase
             .auth()
@@ -155,6 +155,7 @@ const Login = () => {
         }
     };
 
+    // checks if the two passwords match
     const checkPasswords = () => {
         return password === confirmPassword;
     };
@@ -204,9 +205,9 @@ const Login = () => {
                 <input
                     type="password"
                     name="password"
-                     {...register("password", {
+                    {...register("password", {
                         required: true,
-                         minLength: 8,
+                        minLength: 8,
                         pattern: /\d{1}/,
                     })}
                     placeholder="Your Password"
@@ -231,10 +232,10 @@ const Login = () => {
                         type="password"
                         name="confirmPassword"
                         {...register("confirmPassword", {
-                        required: true,
-                         minLength: 8,
-                        pattern: /\d{1}/,
-                    })}
+                            required: true,
+                            minLength: 8,
+                            pattern: /\d{1}/,
+                        })}
                         placeholder="Confirm Your Password"
                         className="form-field"
                         id="confirmPassword"

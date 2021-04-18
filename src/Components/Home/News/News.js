@@ -15,7 +15,13 @@ const News = () => {
                         <h2 className="title">Recent News About Visa</h2>
                     </Col>
                     <Col md={2}>
-                        <Button className="brandBtn">View All<FontAwesomeIcon icon={faArrowRight} style={{marginLeft: "10px"}}/></Button>
+                        <Button className="brandBtn">
+                            View All
+                            <FontAwesomeIcon
+                                icon={faArrowRight}
+                                style={{ marginLeft: "10px" }}
+                            />
+                        </Button>
                     </Col>
                 </Row>
                 <br />
@@ -32,8 +38,14 @@ const News = () => {
                                 Entrepreneur is a prominent version and an easy
                                 one.
                             </p>
-                            <p style={{color: "goldenrod"}}>12/04/2021</p>
-                            <Button className="brandBtn">Continue Reading<FontAwesomeIcon icon={faArrowRight} style={{marginLeft: "10px"}}/></Button>
+                            <p style={{ color: "goldenrod" }}>12/04/2021</p>
+                            <Button className="brandBtn">
+                                Continue Reading
+                                <FontAwesomeIcon
+                                    icon={faArrowRight}
+                                    style={{ marginLeft: "10px" }}
+                                />
+                            </Button>
                         </div>
                     </Col>
                     <Col md={6} className="newsColumn">
@@ -48,8 +60,14 @@ const News = () => {
                                 years, it wasn't that easy. Nowadays, it's easy
                                 to get
                             </p>
-                            <p style={{color: "goldenrod"}}>15/04/2021</p>
-                            <Button className="brandBtn">Continue Reading<FontAwesomeIcon icon={faArrowRight} style={{marginLeft: "10px"}}/></Button>
+                            <p style={{ color: "goldenrod" }}>15/04/2021</p>
+                            <Button className="brandBtn">
+                                Continue Reading
+                                <FontAwesomeIcon
+                                    icon={faArrowRight}
+                                    style={{ marginLeft: "10px" }}
+                                />
+                            </Button>
                         </div>
                     </Col>
                 </Row>

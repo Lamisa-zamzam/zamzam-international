@@ -3,7 +3,6 @@ import { Redirect, Route } from "react-router";
 
 const PrivateRoute = ({ children, ...rest }) => {
     const token = sessionStorage.getItem("token");
-    console.log(token);
     return (
         <Route
             {...rest}

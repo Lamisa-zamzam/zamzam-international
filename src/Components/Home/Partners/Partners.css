@@ -3,7 +3,7 @@
     margin-bottom: 5%;
 }
 
-.partnersSection h6{
+.partnersSection h6 {
     padding: 5%;
     margin: 3%;
     text-align: center;
@@ -13,17 +13,17 @@
     border-radius: 5px;
 }
 
-@media(max-width: 760px){
-    .partnersSection{
+@media (max-width: 760px) {
+    .partnersSection {
         margin-bottom: 25%;
     }
 
-    .partnersSection h1{
+    .partnersSection h1 {
         margin-bottom: 10%;
     }
 }
 
-.partnersSection h1{
+.partnersSection h1 {
     margin-bottom: 5%;
     color: rgb(151, 42, 3);
 }

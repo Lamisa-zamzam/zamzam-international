@@ -14,20 +14,22 @@ const ManageServices = () => {
     }, []);
 
     const handleServiceDelete = (_id) => {
-        fetch(`https://morning-shelf-52119.herokuapp.com/deleteService/${_id}`, {
-            method: "DELETE",
-        })
-        .then(res => res.json())
-        .then(data => {
-            if(data){
-                alert("Your service has been deleted.");
-                window.location.reload();
+        fetch(
+            `https://morning-shelf-52119.herokuapp.com/deleteService/${_id}`,
+            {
+                method: "DELETE",
             }
-            else{
-                alert("Something unexpected happened. Please try again.")
-            }
-        });
-    }
+        )
+            .then((res) => res.json())
+            .then((data) => {
+                if (data) {
+                    alert("Your service has been deleted.");
+                    window.location.reload();
+                } else {
+                    alert("Something unexpected happened. Please try again.");
+                }
+            });
+    };
 
     return (
         <div className="tableContainer">
@@ -35,8 +37,12 @@ const ManageServices = () => {
             <Container className="bookingsContainer">
                 <Row className="headerRow">
                     <Col md={2}></Col>
-                    <Col md={3} style={{marginLeft: "-3%"}}>Service Name</Col>
-                    <Col md={4} style={{marginLeft: "6%"}}>Detail</Col>
+                    <Col md={3} style={{ marginLeft: "-3%" }}>
+                        Service Name
+                    </Col>
+                    <Col md={4} style={{ marginLeft: "6%" }}>
+                        Detail
+                    </Col>
                     <Col md={2}>Price</Col>
                     <Col md={1}></Col>
                 </Row>
@@ -65,7 +71,15 @@ const ManageServices = () => {
                             </p>
                         </Col>
                         <Col md={2} className="statusCol">
-                            <Button style={{backgroundColor: "red", border: "none"}} onClick={() => handleServiceDelete(service._id)}>Delete</Button>
+                            <Button
+                                style={{
+                                    backgroundColor: "red",
+                                    border: "none",
+                                }}
+                                onClick={() => handleServiceDelete(service._id)}
+                            >
+                                Delete
+                            </Button>
                         </Col>
                         <hr />
                     </Row>

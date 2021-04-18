@@ -5,25 +5,25 @@
     color: white;
 }
 
-.sidebarContainer a:-webkit-any-link{
+.sidebarContainer a:-webkit-any-link {
     text-decoration: none;
 }
 
-.sidebarContainer h5{
+.sidebarContainer h5 {
     padding: 10% 5%;
     margin: auto 0;
 }
 
-.sidebarIcon{
+.sidebarIcon {
     margin: auto 0;
 }
 
-.dashboardList{
+.dashboardList {
     color: white;
     display: grid;
     grid-template-columns: 8% 92%;
 }
 
-.dashboardList:hover{
+.dashboardList:hover {
     text-decoration: none;
 }

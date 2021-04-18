@@ -11,22 +11,25 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 export const OrderContext = createContext();
 
 const Book = () => {
+    // payment constants
     const stripe = useStripe();
     const elements = useElements();
     const [paymentError, setPaymentError] = useState(null);
     const [paymentSuccess, setPaymentSuccess] = useState(null);
-    const { id } = useParams();
-    const [chosenService, setChosenService] = useState({});
     const [paymentId, setPaymentId] = useState(null);
     const [paymentBrand, setPaymentBrand] = useState(null);
     const [cardLastFour, setCardLastFour] = useState(null);
     const [cardExpireMonth, setCardExpireMonth] = useState(null);
     const [cardExpireYear, setCardExpireYear] = useState(null);
     const [payedWith, setPayedWith] = useState(null);
-    const { serviceName, _id, price } = chosenService;
+
+    const { id } = useParams();
+    const [chosenService, setChosenService] = useState({});
+    const { serviceName, price } = chosenService;
     const history = useHistory();
-    const [error, setError] = useState(null);
     const email = sessionStorage.getItem("email");
+
+    // react hook form
     const {
         register,
         handleSubmit,
@@ -40,6 +43,7 @@ const Book = () => {
             .then((data) => setChosenService(data[0]));
     }, [id]);
 
+    // handles Payment submit
     const handlePaymentSubmit = async (event) => {
         event.preventDefault();
 
@@ -57,13 +61,17 @@ const Book = () => {
         if (error) {
             setPaymentError(error.message);
             setPaymentSuccess(null);
-            console.log("[error]", error);
         } else {
             setPaymentSuccess(paymentMethod.id);
             setPaymentError(null);
-            console.log("[PaymentMethod]", paymentMethod);
             const { id } = paymentMethod;
-            const { brand,  exp_month, exp_year, last4,funding  } = paymentMethod.card;
+            const {
+                brand,
+                exp_month,
+                exp_year,
+                last4,
+                funding,
+            } = paymentMethod.card;
             setPaymentId(id);
             setPaymentBrand(brand);
             setCardExpireMonth(exp_month);
@@ -73,8 +81,8 @@ const Book = () => {
         }
     };
 
+    // handles form submit
     const onSubmit = (data) => {
-        console.log(data);
         const { name, email } = data;
         const date = new Date();
         const orderDetail = {
@@ -92,7 +100,6 @@ const Book = () => {
             status: "pending",
         };
 
-        console.log(orderDetail);
         fetch("https://morning-shelf-52119.herokuapp.com/placeOrder", {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -209,8 +216,12 @@ const Book = () => {
                         }}
                     />
                     <br />
-                    <br /> 
-                    <Button className="brandBtn" type="submit" disabled={!stripe}>
+                    <br />
+                    <Button
+                        className="brandBtn"
+                        type="submit"
+                        disabled={!stripe}
+                    >
                         Confirm Payment
                     </Button>
                     <br />

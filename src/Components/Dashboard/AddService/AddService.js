@@ -3,10 +3,8 @@ import Sidebar from "../../Shared/Sidebar/Sidebar";
 import { useForm } from "react-hook-form";
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
-import { useHistory } from "react-router";
 
 const AddService = () => {
-    const history = useHistory();
     const [imageURL, setImageURL] = useState(null);
     const [error, setError] = useState(null);
     const {
@@ -25,10 +23,10 @@ const AddService = () => {
         })
             .then((res) => res.json())
             .then((result) => {
-                if(result){
+                if (result) {
                     alert("Your service has been added successfully!!");
                     window.location.reload();
-                };
+                }
             });
     };
 
@@ -38,11 +36,9 @@ const AddService = () => {
         imageData.set("key", "b238360b7dd6273493645ed46cb79ec6");
         if (event.target.files[0]) {
             imageData.append("image", event.target.files[0]);
-            console.log(event.target.files[0]);
             axios
                 .post("https://api.imgbb.com/1/upload", imageData)
                 .then((res) => {
-                    console.log(res);
                     setImageURL(res.data.data.display_url);
                 })
                 .catch((err) => {
@@ -123,6 +119,7 @@ const AddService = () => {
                         </p>
                     )}
                 </Form>
+                <p>{error}</p>
             </div>
         </div>
     );

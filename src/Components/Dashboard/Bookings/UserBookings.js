@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Col } from "react-bootstrap";
 
 const UserBookings = ({ order }) => {
-    const { name, email, serviceName, payedWith, status, _id } = order;
+    const { serviceName, status } = order;
     const [chosenService, setChosenService] = useState({});
 
     useEffect(() => {

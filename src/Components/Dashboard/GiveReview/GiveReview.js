@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Sidebar from "../../Shared/Sidebar/Sidebar";
 import { useForm } from "react-hook-form";
 import { Form, Button } from "react-bootstrap";
@@ -6,7 +6,6 @@ import { Form, Button } from "react-bootstrap";
 const GiveReview = () => {
     const imgURL = sessionStorage.getItem("photo");
     const name = sessionStorage.getItem("name");
-    const [error, setError] = useState(null);
     const {
         register,
         handleSubmit,
@@ -14,7 +13,6 @@ const GiveReview = () => {
     } = useForm();
 
     const onSubmit = (data) => {
-        console.log(data);
         const { name, profession, feedback } = data;
         const review = { name, profession, feedback, imgURL };
 
@@ -25,15 +23,17 @@ const GiveReview = () => {
         })
             .then((res) => res.json())
             .then((result) => {
-                if(result){
-                    alert("Your review has been submitted successfully!! Thanks for your feedback to make us work better for you.");
+                if (result) {
+                    alert(
+                        "Your review has been submitted successfully!! Thanks for your feedback to make us work better for you."
+                    );
                     window.location.reload();
                 }
             });
     };
 
     return (
-        <div className="dashboardContainer" style={{height: "100vh"}}>
+        <div className="dashboardContainer" style={{ height: "100vh" }}>
             <Sidebar />
             <div className="dashboardFormContainer">
                 <h3 className="dashboardTitle">Give us a review</h3>

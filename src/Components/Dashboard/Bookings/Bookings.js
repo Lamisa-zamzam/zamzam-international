@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Form, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import Sidebar from "../../Shared/Sidebar/Sidebar";
 import AdminBookings from "./AdminBookings";
 import UserBookings from "./UserBookings";
 
 const Bookings = () => {
     const [orders, setOrders] = useState([]);
-    console.log(orders);
     const loggedInEmail = sessionStorage.getItem("email");
     const [isAdmin, setIsAdmin] = useState(false);
     const [noOrder, setNoOrder] = useState(false);
@@ -29,9 +28,9 @@ const Bookings = () => {
         )
             .then((res) => res.json())
             .then((data) => {
-                if(data[0]){
+                if (data[0]) {
                     setOrders(data);
-                }else{
+                } else {
                     setNoOrder(true);
                 }
             });
@@ -48,9 +47,7 @@ const Bookings = () => {
             body: JSON.stringify(newStatus),
         })
             .then((res) => res.json())
-            .then((result) => {
-                console.log(result);
-            });
+            .then((result) => {});
     };
 
     return (
@@ -74,15 +71,21 @@ const Bookings = () => {
                             handleStatusChange={handleStatusChange}
                         />
                     ))}
-                {!isAdmin && !noOrder &&
+                {!isAdmin &&
+                    !noOrder &&
                     orders.map((order) => (
                         <Row key={order._id}>
                             <UserBookings order={order} key={order._id} />
                         </Row>
                     ))}
-                    {
-                        noOrder && <h3 className="text-secondary text-center" style={{marginTop: "20%"}}>You have no orders yet!!! Go back and get one today!!</h3>
-                    }
+                {noOrder && (
+                    <h3
+                        className="text-secondary text-center"
+                        style={{ marginTop: "20%" }}
+                    >
+                        You have no orders yet!!! Go back and get one today!!
+                    </h3>
+                )}
             </Container>
         </div>
     );

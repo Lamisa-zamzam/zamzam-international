@@ -21,7 +21,11 @@ const Reviews = () => {
             </h2>
             <div className="d-flex align-items-center"></div>
             <Container className="reviewContainer">
-                <Row>{reviews.map(review => <Review key={review._id} review={review}/>)}</Row>
+                <Row>
+                    {reviews.map((review) => (
+                        <Review key={review._id} review={review} />
+                    ))}
+                </Row>
             </Container>
         </section>
     );

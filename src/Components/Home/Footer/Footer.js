@@ -1,7 +1,7 @@
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Footer.css";
 
 const Footer = () => {
@@ -22,7 +22,13 @@ const Footer = () => {
                         </h6>
                     </div>
                     <div>
-                        <Button className="contactBtn brandBtn">Contact Us<FontAwesomeIcon icon={faArrowRight} style={{marginLeft: "10px"}}/></Button>
+                        <Button className="contactBtn brandBtn">
+                            Contact Us
+                            <FontAwesomeIcon
+                                icon={faArrowRight}
+                                style={{ marginLeft: "10px" }}
+                            />
+                        </Button>
                     </div>
                 </div>
             </Container>
@@ -90,7 +96,7 @@ const Footer = () => {
                             }}
                             className="brandBtn"
                         >
-                           >
+                            >
                         </Button>
                     </Col>
                 </Row>
