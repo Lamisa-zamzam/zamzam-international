@@ -66,7 +66,7 @@ const Bookings = () => {
                     ))}
                 {!isAdmin &&
                     orders.map((order) => (
-                        <Row>
+                        <Row key={order._id}>
                             <UserBookings order={order} key={order._id} />
                         </Row>
                     ))}

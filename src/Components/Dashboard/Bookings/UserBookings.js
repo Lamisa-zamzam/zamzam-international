@@ -4,20 +4,20 @@ import { Col } from "react-bootstrap";
 const UserBookings = ({ order }) => {
     const { name, email, serviceName, payedWith, status, _id } = order;
     const [chosenService, setChosenService] = useState({});
-    const { detail, imageURL, price } = chosenService;
-    console.log(detail, imageURL, price);
-
-    console.log(chosenService);
 
     useEffect(() => {
-        fetch(`https://morning-shelf-52119.herokuapp.com/service/${serviceName}`)
+        fetch(
+            `https://morning-shelf-52119.herokuapp.com/service?serviceName=${serviceName}`
+        )
             .then((res) => res.json())
-            .then((data) => setChosenService(data[0]));
+            .then((data) => {
+                setChosenService(data[0]);
+            });
     }, [serviceName]);
 
     return (
         <Col
-        md={6}
+            md={6}
             style={{
                 boxShadow: "5px 5px 10px gray",
                 borderRadius: "5px",
@@ -29,7 +29,7 @@ const UserBookings = ({ order }) => {
         >
             <div style={{ display: "grid", gridTemplateColumns: "50% 50%" }}>
                 <img
-                    src={imageURL}
+                    src={chosenService && chosenService.imageURL}
                     alt=""
                     style={{ width: "80%", borderRadius: "100%" }}
                 />
@@ -48,7 +48,7 @@ const UserBookings = ({ order }) => {
                 </h2>
             </div>
             <h3>{serviceName}</h3>
-            <p>{detail}</p>
+            <p>{chosenService && chosenService.detail}</p>
         </Col>
     );
 };
