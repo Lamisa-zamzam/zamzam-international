@@ -10,7 +10,7 @@
 
 .reviewContainer {
     padding: 0% 10%;
-    padding-bottom: 20%;
+    padding-bottom: 15%;
 }
 
 .review {
@@ -19,6 +19,12 @@
     box-shadow: 2px 2px 10px gray;
     border-radius: 2px;
     text-align: center;
+}
+
+@media(max-width: 760px){
+    .review{
+        margin-bottom: 15%;
+    }
 }
 
 .quote{

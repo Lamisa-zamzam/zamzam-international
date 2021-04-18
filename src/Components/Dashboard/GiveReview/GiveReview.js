@@ -19,7 +19,7 @@ const GiveReview = () => {
         const { name, profession, feedback } = data;
         const review = { name, profession, feedback, imgURL };
 
-        fetch("http://localhost:5000/giveReview", {
+        fetch("https://morning-shelf-52119.herokuapp.com/giveReview", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(review),

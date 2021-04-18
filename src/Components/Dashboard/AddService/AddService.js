@@ -19,7 +19,7 @@ const AddService = () => {
         const { detail, price, serviceName } = data;
         const service = { detail, price, serviceName, imageURL };
 
-        fetch("http://localhost:5000/addService", {
+        fetch("https://morning-shelf-52119.herokuapp.com/addService", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(service),

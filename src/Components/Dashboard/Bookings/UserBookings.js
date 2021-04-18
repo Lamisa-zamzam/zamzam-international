@@ -10,7 +10,7 @@ const UserBookings = ({ order }) => {
     console.log(chosenService);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/service/${serviceName}`)
+        fetch(`https://morning-shelf-52119.herokuapp.com/service/${serviceName}`)
             .then((res) => res.json())
             .then((data) => setChosenService(data[0]));
     }, [serviceName]);

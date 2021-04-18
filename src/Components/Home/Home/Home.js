@@ -5,15 +5,17 @@ import Services from "../Services/Services";
 import Reviews from "../Reviews/Reviews";
 import Footer from "../Footer/Footer";
 import Strategies from "../Strategies/Strategies";
+import News from "../News/News";
 
 const Home = () => {
     return (
         <div>
             <Header />
-            <Steps></Steps>
+            <Steps />
             <Services />
             <Strategies />
             <Reviews />
+            <News />
             <Footer />
         </div>
     );

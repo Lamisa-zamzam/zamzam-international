@@ -36,7 +36,7 @@ const Book = () => {
     const name = sessionStorage.getItem("name");
 
     useEffect(() => {
-        fetch(`http://localhost:5000/booking/${id}`)
+        fetch(`https://morning-shelf-52119.herokuapp.com/booking/${id}`)
             .then((res) => res.json())
             .then((data) => setChosenService(data[0]));
     }, [id]);
@@ -98,7 +98,7 @@ const Book = () => {
         };
 
         console.log(orderDetail);
-        fetch("http://localhost:5000/placeOrder", {
+        fetch("https://morning-shelf-52119.herokuapp.com/placeOrder", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(orderDetail),

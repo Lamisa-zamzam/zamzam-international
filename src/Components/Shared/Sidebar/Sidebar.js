@@ -16,7 +16,7 @@ const Sidebar = () => {
     const [isAdmin, setIsAdmin] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/checkIfAdmin?email=${email}`)
+        fetch(`https://morning-shelf-52119.herokuapp.com/checkIfAdmin?email=${email}`)
             .then((res) => res.json())
             .then((data) => {
                 if (data[0]) {

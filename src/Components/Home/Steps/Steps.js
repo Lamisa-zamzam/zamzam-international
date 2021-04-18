@@ -4,7 +4,7 @@ import "./Steps.css";
 
 const Steps = () => {
     return (
-        <Container>
+        <Container className="stepsContainer">
             <Row>
                 <Col md={3} className="step">
                     <h6>Step: 1</h6> <h5>Apply Online</h5>

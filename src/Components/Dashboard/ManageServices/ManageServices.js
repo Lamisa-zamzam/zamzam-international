@@ -7,7 +7,7 @@ const ManageServices = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/services")
+        fetch("https://morning-shelf-52119.herokuapp.com/services")
             .then((res) => res.json())
             .then((result) => {
                 setServices(result);
@@ -15,11 +15,19 @@ const ManageServices = () => {
     }, []);
 
     const handleServiceDelete = (_id) => {
-        fetch(`http://localhost:5000/deleteService/${_id}`, {
+        fetch(`https://morning-shelf-52119.herokuapp.com/deleteService/${_id}`, {
             method: "DELETE",
         })
         .then(res => res.json())
-        .then(data => console.log(data));
+        .then(data => {
+            if(data){
+                alert("Your service has been deleted.");
+                window.location.reload();
+            }
+            else{
+                alert("Something unexpected happened. Please try again.")
+            }
+        });
     }
 
     return (

@@ -11,4 +11,8 @@
         margin-left: 0;
         margin-right: 0;
     }
+    
+    .stepsContainer{
+        margin-bottom: 15%;
+    }
 }

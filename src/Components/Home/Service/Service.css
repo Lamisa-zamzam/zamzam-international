@@ -2,3 +2,13 @@
     text-decoration: none;
     color: black;
 }
+
+@media(max-width: 760px){
+    .serviceSection{
+        margin-bottom: 25%;
+    }
+
+    .serviceContainer{
+        margin-bottom: 10%;
+    }
+}

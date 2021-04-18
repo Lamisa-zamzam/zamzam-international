@@ -8,8 +8,8 @@ const Footer = () => {
             <Container
                 style={{ position: "relative", width: "100%", height: "100%" }}
             >
-                <div className="d-flex flex-row contact-div">
-                    <div>
+                <div className="contact-div">
+                    <div className="contactDivCol">
                         <h3>
                             Are you looking for{" "}
                             <strong> VISA Applications</strong>? Contact us.{" "}
@@ -19,7 +19,9 @@ const Footer = () => {
                             lamisazamzam@gmail.com
                         </h6>
                     </div>
-                    <Button className="contactBtn">Contact Us</Button>
+                    <div>
+                        <Button className="contactBtn">Contact Us</Button>
+                    </div>
                 </div>
             </Container>
             <footer className="footer">

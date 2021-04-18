@@ -12,7 +12,7 @@ const Bookings = () => {
     const [isAdmin, setIsAdmin] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/checkIfAdmin?email=${loggedInEmail}`)
+        fetch(`https://morning-shelf-52119.herokuapp.com/checkIfAdmin?email=${loggedInEmail}`)
             .then((res) => res.json())
             .then((data) => {
                 if (data[0]) {
@@ -22,7 +22,7 @@ const Bookings = () => {
     }, [loggedInEmail]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/bookings/${loggedInEmail}`)
+        fetch(`https://morning-shelf-52119.herokuapp.com/bookings/${loggedInEmail}`)
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, [loggedInEmail]);
@@ -30,7 +30,7 @@ const Bookings = () => {
     const handleStatusChange = (e, id) => {
         const newStatus = { status: e.target.value };
 
-        fetch(`http://localhost:5000/updateOrder/${id}`, {
+        fetch(`https://morning-shelf-52119.herokuapp.com/updateOrder/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-type": "application/json; charset=UTF-8",

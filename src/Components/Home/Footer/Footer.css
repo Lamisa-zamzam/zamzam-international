@@ -5,9 +5,27 @@
     position: absolute;
     top: -100px;
     right: 0;
+    display: flex;
+    flex-direction: row;
 }
 
-li{
+@media (max-width: 760px) {
+    .contact-div {
+        display: grid;
+        grid-template-rows: 80% 20%;
+    }
+
+    .contactDivCol {
+        margin-bottom: 10%;
+        padding: 5% -1340% !important;
+    }
+
+    .footer {
+        padding-top: 70% !important;
+    }
+}
+
+li {
     list-style-type: none;
     margin-left: -20px;
 }
