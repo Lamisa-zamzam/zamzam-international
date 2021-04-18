@@ -10,11 +10,11 @@ This responsive project provides a number of visas which you can apply for. It a
 
 My project includes:\
 
-1.  [React](https://reactjs.org/docs/getting-started.html),\
-2.  [React Router](https://reactrouter.com/),\
-3.  [React-Bootstrap](https://react-bootstrap.github.io/),\
-4.  [Font Awesome](https://fontawesome.com/),\
-5.  [Firebase](https://firebase.google.com/docs?authuser=0),\
+1.  [React](https://reactjs.org/docs/getting-started.html),
+2.  [React Router](https://reactrouter.com/),
+3.  [React-Bootstrap](https://react-bootstrap.github.io/),
+4.  [Font Awesome](https://fontawesome.com/),
+5.  [Firebase](https://firebase.google.com/docs?authuser=0),
 6.  [React Hook Form](https://react-hook-form.com/),
 7.  [My own APIs to load data](https://powerful-springs-02476.herokuapp.com),
 8.  [Bootstrap](https://getbootstrap.com/) and
