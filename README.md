@@ -1,71 +1,21 @@
-# Getting Started with Create React App
+# Zamzam International
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Trusted Visa service agency
 
-## Available Scripts
+This responsive project provides a number of visas which you can apply for. It also has [Firebase Authentication System](https://firebase.google.com/docs?authuser=0) for better user experience. You can create an account using email and password or Google. There is a card for each visa and by clicking the book button, if you are logged in, you go to the booking page and you can pay with credit card and apply for it. Your booking data will be saved to the database [Mongodb](https://www.mongodb.com/). You can also give a review form the review page. Through the admin page, you are allowed to add and delete any service and make another admin through the make admin page. You can see all the orders that you have made on our website in the booking list page and if you are an admin, you can see all the orders that have been made by the users and edit the status of any visa order that a user has applied for. Last but not least, this website uses private routing form [React Router](https://reactrouter.com/) and [React Hook Form](https://react-hook-form.com/) for form validation.
 
-In the project directory, you can run:
+# Open [My Live Site](https://complete-website-3.web.app/) to see how it works.
 
-### `npm start`
+### You can also visit [My server](https://morning-shelf-52119.herokuapp.com/) form where I am loading data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+My project includes:\
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# complete-website-client-Lamisa-zamzam
+1.  [React](https://reactjs.org/docs/getting-started.html),\
+2.  [React Router](https://reactrouter.com/),\
+3.  [React-Bootstrap](https://react-bootstrap.github.io/),\
+4.  [Font Awesome](https://fontawesome.com/),\
+5.  [Firebase](https://firebase.google.com/docs?authuser=0),\
+6.  [React Hook Form](https://react-hook-form.com/),
+7.  [My own APIs to load data](https://powerful-springs-02476.herokuapp.com),
+8.  [Bootstrap](https://getbootstrap.com/) and
+9.  [Stipe Payment Method](https://stripe.com/).

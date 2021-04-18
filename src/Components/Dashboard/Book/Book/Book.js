@@ -36,7 +36,7 @@ const Book = () => {
     const name = sessionStorage.getItem("name");
 
     useEffect(() => {
-        fetch(`https://morning-shelf-52119.herokuapp.com/booking/${id}`)
+        fetch(`https://morning-shelf-52119.herokuapp.com/service/${id}`)
             .then((res) => res.json())
             .then((data) => setChosenService(data[0]));
     }, [id]);
