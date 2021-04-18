@@ -77,8 +77,8 @@ const Footer = () => {
                         <h4>Subscribe to our Newsletter</h4>
                         <p>
                             {" "}
-                            cumque minus, reiciendis facilis officia dolore
-                            saepe alias aliquam.
+                            Our newsletter provides you with all the recent news
+                            about Visa and immigration instantly.
                         </p>
                         <input
                             type="email"
