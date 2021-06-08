@@ -8,6 +8,8 @@ This responsive project provides a number of visas which you can apply for. It a
 
 ### You can also visit [My server](https://morning-shelf-52119.herokuapp.com/) form where I am loading data.
 
+### My server side code link: [https://github.com/Lamisa-zamzam/zamzam-international-server](https://github.com/Lamisa-zamzam/zamzam-international-server)
+
 My project includes:
 
 1.  [React](https://reactjs.org/docs/getting-started.html),
@@ -19,3 +21,9 @@ My project includes:
 7.  [My own APIs to load data](https://powerful-springs-02476.herokuapp.com),
 8.  [Bootstrap](https://getbootstrap.com/) and
 9.  [Stipe Payment Method](https://stripe.com/).
+
+### RoadMap
+=> improving the Sidebar of the Dashboard using Flex-grow
+
+### Contributing
+Pull requsts are welcome. For major changes, please open a issue first and discuss what you would like to change. 
