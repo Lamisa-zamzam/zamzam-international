@@ -26,4 +26,4 @@ My project includes:
 => improving the Sidebar of the Dashboard using Flex-grow
 
 ### Contributing
-Pull requsts are welcome. For major changes, please open a issue first and discuss what you would like to change. 
+Pull requests are welcome. For major changes, please open a issue first and discuss what you would like to change. 
